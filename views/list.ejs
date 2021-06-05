@@ -16,7 +16,7 @@
   <div class="box">
     <% for(var i=0;i<list.length;i++) { %>
       <div class="item">
-        <input type="checkbox" name="hello" value="String">
+        <input type="checkbox" value="<%=list[i]%>">
         <p><%= list[i] %></p>
       </div>
     <% } %>

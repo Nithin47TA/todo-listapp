@@ -3,7 +3,7 @@ const bodyparser = require("body-parser");
 const date = require(__dirname + "/date.js");
 
 const app = express();
-var listitem = ["hello"];
+const listitem = ["hello"];
 app.use(bodyparser.urlencoded({
   extended: true
 }));
