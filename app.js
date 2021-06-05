@@ -23,6 +23,11 @@ app.post("/", function(req, res) {
 
 });
 
+app.post("/checkbox",function(req,res){
+  listitem.splice(listitem.indexOf(req.body.value));
+  res.redirect("/");
+});
+
 app.listen(3000, function() {
   console.log("connected to port 3000");
 });
