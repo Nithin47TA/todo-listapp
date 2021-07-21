@@ -6,3 +6,6 @@ node_modules/
 
 # dotenv environment variables file
 .envt
+
+#DS
+.DS_Stores
