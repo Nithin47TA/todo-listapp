@@ -15,19 +15,22 @@
 
   </div>
   <div class="box">
+    
     <% for(var i=0;i<list.length;i++) { %>
       <div class="item">
-        <form class="item" action="/checkbox" method="post">
-          <input type="checkbox" value="<%=list[i]%>" onChange="this.form.submit()">
+          <form class="item" action="/checkbox" method="post">
+          <input type="checkbox" name="value" value="<%=list[i]._id%>" onChange="this.form.submit()">
+          <input type="hidden" name="rootName" value="<%= day %>"></input>
         </form>
-        <p><%= list[i] %></p>
+
+        <p><%= list[i].itemname %></p>
       </div>
     <% } %>
-
+    
 
     <form class="item" action="/" method="POST">
     <input type="text" name="Item" placeholder="newItem" autocomplete="off">
-    <button name="button" type="submit">+</button>
+    <button name="button" type="submit"  value="<%= day %>">+</button>
     </form>
   </div>
 
