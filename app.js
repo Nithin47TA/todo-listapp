@@ -103,7 +103,7 @@ else{
 
 app.get("/:newList",function(req,res){
   
-  const newroot=req.params.newList;
+  const newroot=_.capitalize(req.params.newList);
   Item.findOne({list:newroot},function(err,result){
     if(!err)
     {
