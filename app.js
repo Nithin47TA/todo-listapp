@@ -3,9 +3,13 @@ const bodyparser = require("body-parser");
 const date = require(__dirname + "/date.js");
 const mongoose=require("mongoose");
 const _=require("lodash");
+const address_db=require(__dirname+"/data.js");
 const app = express();
-mongoose.connect('mongodb://localhost:27017/todoListDB', {useNewUrlParser: true, useUnifiedTopology: true});
 
+//connecting to database
+mongoose.connect(address_db.dbaddress, {useNewUrlParser: true, useUnifiedTopology: true});
+
+// local db :   'mongodb://localhost:27017/todoListDB'
 
 const todoListSchema=new mongoose.Schema({ itemname:String});
 const itemListSchema=new mongoose.Schema({ list:String,item:[todoListSchema]});
@@ -132,7 +136,8 @@ app.get("/:newList",function(req,res){
 });
 
 
-
-app.listen(3000, function() {
-  console.log("connected to port 3000");
+let port=process.env.PORT||3000;
+app.listen(port, function() {
+  console.log("connected to port : "+port);
 });
+

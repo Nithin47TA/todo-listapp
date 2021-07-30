@@ -12,3 +12,12 @@ node_modules/
 
 #lock-package
 package-lock.json
+
+#procfile
+Procfile
+
+#data.js
+data.js
+
+#env
+/*.env
