@@ -1,0 +1,1 @@
+exports.dbaddress='mongodb+srv://admin-nithin:thazhe123@todocluster.koeun.mongodb.net/ToDoDB?retryWrites=true&w=majority';
