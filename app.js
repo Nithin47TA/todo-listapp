@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const bodyparser = require("body-parser");
 const date = require(__dirname + "/date.js");
@@ -7,7 +8,7 @@ const address_db=require(__dirname+"/data.js");
 const app = express();
 
 //connecting to database
-mongoose.connect(address_db.dbaddress, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.ADDRESS, {useNewUrlParser: true, useUnifiedTopology: true});
 
 // local db :   'mongodb://localhost:27017/todoListDB'
 
